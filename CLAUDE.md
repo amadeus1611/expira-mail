@@ -6,3 +6,5 @@ GSSC office stack for gsscph.com: Stalwart (mail, calendar, contacts, WebDAV fil
 - Pin exact image tags; verify upstream before bumping.
 - CI: `shellcheck scripts/*.sh` and `docker compose config -q` must pass.
 - No invented figures (prices, quotas): cite a source or say unverified.
+- Rust first. `cargo fmt --check`, `cargo clippy --workspace --all-targets -- -D warnings` (clippy all + pedantic, no `unsafe`) and `cargo test` must pass before every push; checks only tighten.
+- UI follows the EXPIRA design canon through `crates/expira-design`: no colour, size or motion value outside it.
