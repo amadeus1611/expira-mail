@@ -1,0 +1,19 @@
+[workspace]
+resolver = "3"
+members = ["crates/expira-design"]
+
+[workspace.package]
+edition = "2024"
+license = "UNLICENSED"
+publish = false
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+unused_must_use = "deny"
+missing_docs = "deny"
+
+[workspace.lints.clippy]
+all = { level = "deny", priority = -1 }
+pedantic = { level = "deny", priority = -1 }
+# Short math names (p, t, k) follow the formulas they implement.
+many_single_char_names = "allow"
